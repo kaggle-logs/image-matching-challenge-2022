@@ -106,6 +106,17 @@ $m_i = K[R|T]M_i$
 左カメラに写る位置 $X_L$ が分かれば、右カメラにおけるエピポーラ線を一意に決定することができる。
 つまり右カメラから物体Xの位置を探すには、その epiline 上の点のみを探索すればよい。
 
+
+### Fundamental matrix
+
+2台のカメラ平面の座標 $m_i^\prime, m_i$ は以下の式を満たす
+
+$
+m_i^\prime F m_i = 0
+$
+
+このときの $F$ を fundamental matrixと呼ぶ。eight-point algorithm か openCV, Kornia で計算できる。
+
 # Reference
 
 - http://www.ail.cs.gunma-u.ac.jp/ailwiki/index.php?%E3%82%A8%E3%83%94%E3%83%9D%E3%83%BC%E3%83%A9%E6%8B%98%E6%9D%9F%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E5%B0%8F%E6%83%91%E6%98%9F%E7%94%BB%E5%83%8F%E3%81%AE%E5%AF%BE%E5%BF%9C%E7%82%B9%E6%B1%BA%E5%AE%9A%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E7%B2%BE%E5%BA%A6%E5%90%91%E4%B8%8A%E6%89%8B%E6%B3%95
