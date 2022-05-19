@@ -109,3 +109,46 @@ $m_i = K[R|T]M_i$
 # Reference
 
 - http://www.ail.cs.gunma-u.ac.jp/ailwiki/index.php?%E3%82%A8%E3%83%94%E3%83%9D%E3%83%BC%E3%83%A9%E6%8B%98%E6%9D%9F%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E5%B0%8F%E6%83%91%E6%98%9F%E7%94%BB%E5%83%8F%E3%81%AE%E5%AF%BE%E5%BF%9C%E7%82%B9%E6%B1%BA%E5%AE%9A%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E7%B2%BE%E5%BA%A6%E5%90%91%E4%B8%8A%E6%89%8B%E6%B3%95
+
+
+# LoFtr
+
+
+# 戦略
+## 古典的なパイプライン
+![](img/bb328a63eddb8a96e4be1996720a2315.png)
+
+- local features の計算
+- local features のマッチング
+- フィルタリング
+- RANSAC の適用
+
+# カメラ
+
+camera には extrinsic と intrinsic のパラメータがある
+
+## extrinsic
+
+- 三次元座標
+- world system に対するカメラの座標系
+
+## intrinsics
+
+- 焦点距離
+- skew, distortion, scale
+- principal offsets
+
+# 手法まとめ
+
+## RANSAC (Random Sample Consensus)
+
+外れ値の影響を除いてモデルを学習する手法。学習データの subset を作成し、繰り返しモデルを学習することで
+頑強なモデルを作成することができる。
+
+## LoFTR
+
+## SuperGlue
+
+## OANet
+
+## DISK
